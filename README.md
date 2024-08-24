@@ -1,18 +1,78 @@
-# Project Title: Audible Dataset Cleaning and Standardization using Power Query Editor
+# Audible Dataset Cleaning and Standardization
 
-## Detailed Description:
-In this project, I used Power Query Editor within Excel to clean and standardize an Audible dataset, preparing it for subsequent analysis. Below are the key steps taken:
+This project demonstrates how to use Power Query Editor in Excel to clean and standardize an Audible dataset. The goal is to prepare the dataset for further analysis by ensuring data consistency and formatting. The following tasks are accomplished:
 
-1. Name Column Standardization: Converted all names to title case using the Text.Proper function, ensuring uniformity across the dataset.
-2. Separation of Author Names: Split combined first and last names in the Author column into separate fields using Power Query's 'Split Column' feature.
-3. Date Format Consistency: Ensured all entries in the Releasedate column followed the "DD-MM-YYYY" format.
-4. Time Column Conversion: Transformed text-based time values into Excel-recognized duration formats using custom formulas to extract hours and minutes.
-5. Price Column Validation: Converted the Price column to a numeric format and flagged any non-numeric values for correction or exclusion.
-6. Rating Conversion: Converted text-based ratings from the Stars column into numeric values, enabling easier sorting and analysis.
-7. Splitting of Narratedby Column: Separated multiple narrators into distinct columns, making it easier to analyze audiobook narrators individually.
-8. ReleaseInfo Column Creation: Merged the Releasedate and Language columns into a single field, combining key metadata for easier reference.
-9. Currency Formatting: Ensured all price entries were formatted consistently with two decimal places.
+## Tasks
 
-This project showcases advanced data cleaning techniques using Power Query Editor, demonstrating my ability to handle complex datasets, ensure data consistency, and prepare data for detailed analysis.
+1. **Standardize Name Column**
+   - Convert names in the "name" column to title casing to ensure consistent capitalization.
+
+2. **Separate Combined Author Names**
+   - Split combined first and last names in the "author" column into separate columns for first and last names.
+
+3. **Consistent Date Formatting**
+   - Ensure all entries in the "releasedate" column follow a consistent date format (DD-MM-YYYY).
+
+4. **Convert Time Column**
+   - Change the time column from text format to a duration format that Excel recognizes.
+
+5. **Numeric Price Column**
+   - Ensure the "price" column is in a numeric format. Identify and address any non-numeric values.
+
+6. **Convert Text Ratings to Numeric**
+   - Convert text ratings in the "stars" column to numeric values for easier analysis.
+
+7. **Split NarratedBy Column**
+   - Separate the "narratedby" column into multiple columns if it contains multiple narrators.
+
+8. **Merge Releasedate and Language**
+   - Combine the "releasedate" and "language" columns into a new column named "releaseinfo" with the format "DD-MM-YYYY, Language."
+
+9. **Format Currency Values**
+   - Ensure all currency values in the "price" column are formatted consistently with two decimal places.
+
+## Steps to Clean and Standardize the Dataset
+
+1. **Open Power Query Editor**
+   - Load your dataset into Power Query Editor in Excel.
+
+2. **Standardize Name Column**
+   - Select the "name" column, use the "Transform" tab, and apply the "Capitalize Each Word" transformation.
+
+3. **Separate Combined Author Names**
+   - Select the "author" column, use the "Split Column" feature to divide by delimiter (if space or comma), and rename columns as "First Name" and "Last Name."
+
+4. **Consistent Date Formatting**
+   - Select the "releasedate" column, use the "Change Type" feature, and set the data type to "Date" ensuring the format is set to DD-MM-YYYY.
+
+5. **Convert Time Column**
+   - Select the "time" column, use the "Transform" tab to convert text to a duration format by changing the type to "Duration."
+
+6. **Numeric Price Column**
+   - Select the "price" column, ensure it is in a numeric format. Use the "Detect Data Type" feature to find and correct any non-numeric values.
+
+7. **Convert Text Ratings to Numeric**
+   - Create a new column with numeric ratings by mapping text values to numbers using the "Add Column" feature and "Custom Column" with an appropriate formula.
+
+8. **Split NarratedBy Column**
+   - Select the "narratedby" column, use the "Split Column" feature based on delimiter (e.g., comma) to create multiple columns.
+
+9. **Merge Releasedate and Language**
+   - Use the "Add Column" feature to create a new column "releaseinfo" by combining the "releasedate" and "language" columns with a custom formula.
+
+10. **Format Currency Values**
+    - Select the "price" column, use the "Transform" tab to set the format to a numeric type with two decimal places.
+
+## Final Steps
+
+- **Apply Changes**
+  - Click "Close & Load" to apply changes and load the cleaned dataset back into Excel.
+
+- **Verify Data**
+  - Review the dataset to ensure all transformations have been applied correctly and the data is ready for analysis.
+
+## Contribution
+
+Feel free to fork this repository and make improvements. If you encounter any issues or have suggestions, please open an issue or pull request.
 
 ## GitHub: EthenDcosta5
