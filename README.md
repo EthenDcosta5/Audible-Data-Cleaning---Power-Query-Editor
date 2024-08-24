@@ -1,5 +1,4 @@
-# GitHub Project Description
-## Project Title: Audible Dataset Cleaning and Standardization using Power Query Editor
+# Project Title: Audible Dataset Cleaning and Standardization using Power Query Editor
 
 ## Detailed Description:
 In this project, I used Power Query Editor within Excel to clean and standardize an Audible dataset, preparing it for subsequent analysis. Below are the key steps taken:
